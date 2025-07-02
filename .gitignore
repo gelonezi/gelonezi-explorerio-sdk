@@ -53,5 +53,8 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
+# Rider Files
+/.idea
+
 # Temporary files
 /.tmp

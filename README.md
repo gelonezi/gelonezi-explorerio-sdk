@@ -1,6 +1,6 @@
-# Gelonezi's ExplorerIO SDK
+# Gelonezi ExplorerIO SDK
 
-[![GitHub Repo](https://img.shields.io/badge/github-gelonezi%2Fexplorerio-orange)](https://github.com/stars/gelonezi/lists/explorerio)
+[![GitHub Repo](https://img.shields.io/badge/github-gelonezi%2Fexplorerio--sdk-orange)](https://github.com/stars/gelonezi/lists/explorerio)
 [![NuGet Version](https://img.shields.io/nuget/v/Gelonezi.ExplorerIO.Sdk)](https://www.nuget.org/packages/Gelonezi.ExplorerIO.Sdk)
 
 The **Gelonezi ExplorerIO SDK** provides a .NET abstraction layer for integrating with cloud storage services. It handles credentials, service configuration, and exposes a common `IService` interface for read-only operations across multiple providers.
@@ -63,7 +63,7 @@ dotnet add package Gelonezi.ExplorerIO.Sdk
   └─ Gelonezi.ExplorerIO.Sdk        # SDK implementation
 /tests
   ├─ unit                           # Unit tests (no external dependencies)
-  └─ integration                    # Integration tests (Docker Compose)
+  └─ integration                    # Integration tests (uses Docker Compose)
 /samples
   └─ Gelonezi.Console.Sdk           # Sample usage console app
 ```
@@ -91,9 +91,9 @@ buckets.Value.ToList().ForEach(b => Console.WriteLine(b.FolderName));
 
 ## Documentation & Contributions
 
-Full documentation will be available at [exploreriodocs.gelonezi.com](https://exploreriodocs.gelonezi.com).
+Full documentation at [exploreriodocs.gelonezi.com](https://exploreriodocs.gelonezi.com).
 
-Guidelines for Contributions is available in the full documentation site.
+Guidelines for Contributions is available in the full documentation.
 
 ---
 
