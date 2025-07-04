@@ -55,6 +55,7 @@ nunit-*.xml
 
 # Rider Files
 /.idea
+/Gelonezi.ExplorerIO.Sdk.sln.DotSettings.user
 
 # Temporary files
 /.tmp

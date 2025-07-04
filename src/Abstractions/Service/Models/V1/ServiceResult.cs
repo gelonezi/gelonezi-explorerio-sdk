@@ -3,27 +3,27 @@ namespace Gelonezi.ExplorerIO.Sdk.Abstractions.Service.Models.V1;
 public class ServiceResult<T>
 {
     public bool IsSuccess { get; }
-    public IEnumerable<T>? Results { get; }
+    public T? Result { get; }
     public string? ErrorCode { get; }
     public string? ErrorMessage { get; }
-    public Exception? Exception { get; }
+    public Exception? InnerException { get; }
 
-    private ServiceResult(IEnumerable<T> results)
+    private ServiceResult(T result)
     {
         IsSuccess = true;
-        Results = results;
+        Result = result;
     }
 
-    private ServiceResult(string errorCode, string errorMessage, Exception? exception = null)
+    private ServiceResult(string errorCode, string errorMessage, Exception? innerException = null)
     {
         IsSuccess = false;
         ErrorCode = errorCode;
         ErrorMessage = errorMessage;
-        Exception = exception;
+        InnerException = innerException;
     }
 
-    public static ServiceResult<T> Success(IEnumerable<T> results) => new(results);
+    public static ServiceResult<T> Success(T result) => new(result);
 
-    public static ServiceResult<T> Failure(string errorCode, string errorMessage, Exception? exception = null)
-        => new(errorCode, errorMessage, exception);
+    public static ServiceResult<T> Failure(string errorCode, string errorMessage, Exception? innerException = null)
+        => new(errorCode, errorMessage, innerException);
 }

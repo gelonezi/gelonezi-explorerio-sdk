@@ -8,11 +8,11 @@ public interface IFileTreeService
         string credentialKey,
         CancellationToken cancellationToken = default);
 
-    Task<ServiceResult<RootFolderDto>> GetRootFoldersAsync(
+    Task<ServiceResult<IEnumerable<RootFolderDto>>> GetRootFoldersAsync(
         string credentialKey,
         CancellationToken cancellationToken = default);
 
-    Task<ServiceResult<ItemDto>> GetItemsAsync(
+    Task<ServiceResult<IEnumerable<ItemDto>>> GetItemsAsync(
         string credentialKey,
         string prefix,
         int startIndex,
