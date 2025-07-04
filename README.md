@@ -1,6 +1,6 @@
 # Gelonezi ExplorerIO SDK
 
-[![GitHub Repo](https://img.shields.io/badge/github-gelonezi%2Fexplorerio--sdk-orange)](https://github.com/stars/gelonezi/lists/explorerio)
+[![GitHub Repo](https://img.shields.io/badge/github-gelonezi%2Fexplorerio--sdk-orange)](https://github.com/gelonezi/explorerio-sdk)
 [![NuGet Version](https://img.shields.io/nuget/v/Gelonezi.ExplorerIO.Sdk)](https://www.nuget.org/packages/Gelonezi.ExplorerIO.Sdk)
 
 The **Gelonezi ExplorerIO SDK** provides a .NET abstraction layer for integrating with cloud storage services. It handles credentials, service configuration, and exposes a common `IService` interface for read-only operations across multiple providers.
@@ -73,11 +73,11 @@ dotnet add package Gelonezi.ExplorerIO.Sdk
 ## Usage Example
 
 ```csharp
-using Gelonezi.ExplorerIo.Sdk.Abstractions.Interfaces.Service.V1;
-using Gelonezi.ExplorerIo.Sdk.Abstractions.Models.Service.V1;
+using Gelonezi.ExplorerIO.Sdk.Abstractions.Interfaces.Service.V1;
+using Gelonezi.ExplorerIO.Sdk.Abstractions.Models.Service.V1;
 
 // Resolve via DI or manual instantiation
-iService = new S3ExplorerService(options, logger);
+var iService = new S3ExplorerService(options, logger);
 
 var result = await iService.IsConfigurationValidAsync("default");
 if (!result.IsSuccess) throw new Exception(result.Message);
