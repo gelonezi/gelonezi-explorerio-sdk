@@ -1,9 +1,12 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Gelonezi.ExplorerIO.Sdk.Abstractions.Service.Models.V1;
 
 /// <summary>
 /// Represents the result of a service operation, indicating success or failure.
 /// </summary>
 /// <typeparam name="T">The type of the result returned on success.</typeparam>
+[ExcludeFromCodeCoverage]
 public class ServiceResult<T>
 {
     /// <summary>

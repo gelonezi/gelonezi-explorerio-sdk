@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Gelonezi.ExplorerIO.Sdk.Abstractions.Credentials.Models.V1;
 
+[ExcludeFromCodeCoverage]
 public class CredentialOptions
 {
     public string CredentialKey { get; set; } = string.Empty;

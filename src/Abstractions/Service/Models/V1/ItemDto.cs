@@ -1,7 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using Gelonezi.ExplorerIO.Sdk.Abstractions.Service.Models.V1.Enums;
 
 namespace Gelonezi.ExplorerIO.Sdk.Abstractions.Service.Models.V1;
 
+[ExcludeFromCodeCoverage]
 public class ItemDto
 {
     public string ItemKey { get; set; } = string.Empty;
