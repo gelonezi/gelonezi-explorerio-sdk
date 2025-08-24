@@ -41,4 +41,21 @@ public class ServiceResultTests
         serviceResult.ErrorMessage.Should().Be(errorMessage);
         serviceResult.InnerException.Should().Be(innerException);
     }
+    
+    [Fact]
+    public void Failure_ServiceResult_Should_Initialize_Without_Error_Details()
+    {
+        // Arrange
+        const string errorCode = "Error123";
+        const string errorMessage = "An error occurred";
+
+        // Act
+        var serviceResult = ServiceResult<string>.Failure(errorCode, errorMessage);
+
+        // Assert
+        serviceResult.IsSuccess.Should().BeFalse();
+        serviceResult.Result.Should().BeNull();
+        serviceResult.ErrorCode.Should().Be(errorCode);
+        serviceResult.ErrorMessage.Should().Be(errorMessage);
+    }
 }
